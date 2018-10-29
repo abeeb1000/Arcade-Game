@@ -17,7 +17,7 @@
 
 ## Screenshot
 
-  ![mobile view](images\Effective JavaScript  Frogger.png)
+  ![mobile view](images\Frogger.png)
 
 ## Built With
   - HTML
