@@ -1,27 +1,20 @@
 body {
     text-align: center;
 }
-p {
-	font-size:25px;
-	color: #0000ff;
-	font-family: Candal;
-	font-weight: bold;
-  padding: 0;
-  margin: 0;
-}
+
 canvas {
     padding:0;
     margin-top:-40px;
     max-height:600px;
 }
+/*
+ * for smaller devices
+ */
 @media screen and (max-width: 767px) {
-
 	canvas {
 		max-width: 360px;
 		min-height: 450px;
-
 	}
-
 }
 
 /*
@@ -97,14 +90,10 @@ canvas {
   padding: 0px 10px;
   font-weight: 200;
   height: 40%;
+  background-color: #95f442;
 }
 
-.modal-footer {
-    background-color: #95f442;
-    color: white;
-    border : 5px solid white;
-}
-.modal-footer button{
+button{
   margin : 15px 15px;
   cursor: pointer;
 }

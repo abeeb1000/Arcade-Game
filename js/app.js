@@ -1,5 +1,3 @@
-
-
 // Enemies our player must avoid
 var Enemy = function(speed, location) {
     this.sprite = 'images/enemy-bug.png';
@@ -24,9 +22,7 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
+//  player class
 var Myman = function() {
   this.sprite = 'images/char-boy.png';
   this.moveX = 101;
@@ -37,7 +33,6 @@ var Myman = function() {
 };
 
 Myman.prototype.update = function() {
-//allEnemies.forEach(function(enemy){
 for(enemy of allEnemies){
   if(this.y-20 == enemy.y && (enemy.x + enemy.speed/4 > this.x && enemy.x < this.x + this.moveX/2)){
     this.x = this.moveX * 2;
@@ -89,18 +84,18 @@ Myman.prototype.handleInput = function(input) {
         break;
   };
 };
-// Instantiate your objects.
+// objects Instantiated
 var player = new Myman();
 var allEnemies = [];
 allEnemies[0] = new Enemy(100, 83);
 allEnemies[1] = new Enemy(350, 166);
 allEnemies[2] = new Enemy(50, 249);
-//allEnemies[3] = new Enemy(300, 83);
-//allEnemies[4] = new Enemy(100, 166);
-//allEnemies[5] = new Enemy(30, 249);
-//allEnemies[6] = new Enemy(85, 166);
-//allEnemies[7] = new Enemy(1000, 83);
-//allEnemies[8] = new Enemy(10, 249);
+allEnemies[3] = new Enemy(300, 83);
+allEnemies[4] = new Enemy(100, 166);
+allEnemies[5] = new Enemy(30, 249);
+allEnemies[6] = new Enemy(85, 166);
+allEnemies[7] = new Enemy(500, 83);
+allEnemies[8] = new Enemy(10, 249);
 
 
 // This listens for key presses
