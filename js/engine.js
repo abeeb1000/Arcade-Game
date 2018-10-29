@@ -24,12 +24,19 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime,
         id;
-
+    var modal = document.getElementById('myModal'),
+        span = document.getElementsByClassName("close")[0],
+        replay = document.getElementById('btnreplay');
 
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
+    replay.addEventListener("click", function(){
+           modal.style.display = "none";
+            player.winner = false;
+           id = win.requestAnimationFrame(main);
+       });
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
      */
@@ -55,15 +62,34 @@ var Engine = (function(global) {
         lastTime = now;
 
         /* Use the browser's requestAnimationFrame function to call this
-         * function again as soon as the browser is able to draw another frame.
+         * function again as soon as the browser is able to draw another frame.*/
 
          if (player.winner === true ){
            win.cancelAnimationFrame(id);
+           modal.style.display = "block";
          }else{
            id = win.requestAnimationFrame(main);
-         };*/
-         id = win.requestAnimationFrame(main);
+         };
+         //id = win.requestAnimationFrame(main);
+
     }
+
+
+
+  // When the user clicks on <span> (x), close the modal
+    span.addEventListener("click", function(){
+           modal.style.display = "none";
+       });
+
+  // When the user clicks anywhere outside of the modal, close it
+    window.addEventListener("click", function(){
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  });
+
+
+
 
     /* This function does some initial setup that should only occur once,
      * particularly setting the lastTime variable that is required for the

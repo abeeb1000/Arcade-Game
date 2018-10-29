@@ -1,3 +1,5 @@
+
+
 // Enemies our player must avoid
 var Enemy = function(speed, location) {
     this.sprite = 'images/enemy-bug.png';
@@ -93,12 +95,12 @@ var allEnemies = [];
 allEnemies[0] = new Enemy(100, 83);
 allEnemies[1] = new Enemy(350, 166);
 allEnemies[2] = new Enemy(50, 249);
-allEnemies[3] = new Enemy(300, 83);
-allEnemies[4] = new Enemy(100, 166);
-allEnemies[5] = new Enemy(30, 249);
-allEnemies[6] = new Enemy(85, 166);
-allEnemies[7] = new Enemy(1000, 83);
-allEnemies[8] = new Enemy(10, 249);
+//allEnemies[3] = new Enemy(300, 83);
+//allEnemies[4] = new Enemy(100, 166);
+//allEnemies[5] = new Enemy(30, 249);
+//allEnemies[6] = new Enemy(85, 166);
+//allEnemies[7] = new Enemy(1000, 83);
+//allEnemies[8] = new Enemy(10, 249);
 
 
 // This listens for key presses
