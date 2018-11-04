@@ -17,7 +17,7 @@
 
 ## Screenshot
 
-  ![mobile view](images\Frogger.png)
+  ![mobile view](images/Frogger.png)
 
 ## Built With
   - HTML
